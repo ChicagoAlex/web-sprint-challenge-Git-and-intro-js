@@ -248,21 +248,14 @@ function get20s(array) {
   const twentythCentury = [];
   for(let i = 0; i < array.length; i++){
     const wordles = array[i].years.split(' ');
-    if(wordles[0] > '1899'){
+    if(wordles[0] >= '1900' && wordles[2] <= '2000'){
       twentythCentury.push(array[i].name)
     }
   }
   return twentythCentury
 }
-// console.log(get20s(artists));
+console.log(get20s(artists));
 
-// for(let i = 0; i < artists.length; i++){
-//   const wordles = artists[i].years.split(' ');
-//   console.log(wordles[0])
-// }
-
-// const wordies = artists[0].years.split(' ');
-// console.log(wordies[0]);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 

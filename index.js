@@ -245,14 +245,24 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  // const twentythCentury = [];
-  // for(let i = 0; i < array.length; i++){
-  //   if(){
-
-  //   }
-  // }
+  const twentythCentury = [];
+  for(let i = 0; i < array.length; i++){
+    const wordles = array[i].years.split(' ');
+    if(wordles[0] > '1899'){
+      twentythCentury.push(array[i].name)
+    }
+  }
+  return twentythCentury
 }
+// console.log(get20s(artists));
 
+// for(let i = 0; i < artists.length; i++){
+//   const wordles = artists[i].years.split(' ');
+//   console.log(wordles[0])
+// }
+
+// const wordies = artists[0].years.split(' ');
+// console.log(wordies[0]);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -337,7 +347,7 @@ function artistInfo(array, name){
   }
   return bioReturn;
 }
-console.log(artistInfo(artists, 'Frida Kahlo'));
+// console.log(artistInfo(artists, 'Frida Kahlo'));
 
 
 
@@ -359,7 +369,7 @@ function artistByCountry(array, nationality){
   }
   return nationalityArray;
 }
-console.log(artistByCountry(artists, 'Spanish'));
+// console.log(artistByCountry(artists, 'Spanish'));
 
 
 /* ***** END OF TASKS ***** */
